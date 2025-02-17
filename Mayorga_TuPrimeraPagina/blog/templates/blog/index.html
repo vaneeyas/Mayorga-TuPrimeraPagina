@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos</title>
-</head>
+{% extends 'blog/base.html' %}
 
-<body>
+{% block title%}
+    Página de inicio
+{% endblock title%}
+    
+{% block content_title%}
+    <h2>Bienvenidos a mi primera página web hecha con Python y Django!</h2>
+{% endblock content_title%}
+{% block content%}
+<p>Las tecnologías de Python y Django han transformado la forma en que desarrollamos aplicaciones web y software en general. Python, conocido por su simplicidad y legibilidad, se ha consolidado como uno de los lenguajes de programación más populares en el mundo. Su sintaxis clara y su gran comunidad de desarrolladores lo convierten en una excelente opción tanto para principiantes como para profesionales experimentados. Desde el análisis de datos hasta la inteligencia artificial, Python es el lenguaje que impulsa muchas de las innovaciones tecnológicas más destacadas.</p>
 
-    {% block title%}
-       <h1>Bienvenidos</h1>
-    {% endblock title%}
-        
-    {% block content_title%}
-        <h2>Un Título</h2>
-    {% endblock content_title%}
-    {% block content%}
-        <h3>Bienvenidos, che</h3>
-    {% endblock content %}
-</body>
+<p>Por otro lado, Django es un framework web para Python que facilita la creación de aplicaciones web robustas, seguras y escalables. Con Django, los desarrolladores pueden construir aplicaciones web de alta calidad en menos tiempo gracias a su estructura bien definida y su enfoque "baterías incluidas". La capacidad de Django para manejar tareas comunes como autenticación, bases de datos, y administración de contenido de manera eficiente permite a los desarrolladores centrarse en la lógica de negocio sin tener que reinventar la rueda.</p>
+
+<p>Si deseas descubrir más sobre cómo estas tecnologías están revolucionando el desarrollo web y cómo puedes comenzar a aprovecharlas en tus proyectos, te invitamos a explorar el contenido de nuestro sitio web. Navega por el menú de navegación y aprende todo lo que necesitas saber sobre Python, Django, y cómo estos pueden ayudarte a llevar tus ideas al siguiente nivel. ¡La aventura tecnológica apenas comienza!</p>
+
+
+{% endblock content %}
