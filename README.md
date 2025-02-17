@@ -1,4 +1,6 @@
 # Mayorga-TuPrimeraPagina
 Alumna: Vanesa Yasmin Mayorga
 
-Admin credentials para el sector ADMIN de Django: admin, admin
+Admin credentials para el sector ADMIN de Django: 
+user:admin
+pass: admin
