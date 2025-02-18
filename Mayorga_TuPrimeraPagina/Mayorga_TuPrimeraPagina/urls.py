@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from blog import views
 
+app_name="blog"
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
+    path("index/", views.index, name="index"),
+    path("cursos_disponibles/", views.cursos_disponibles, name="cursos_disponibles"),
 ]
