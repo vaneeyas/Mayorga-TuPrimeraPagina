@@ -10,8 +10,8 @@
 
 {% block content%}
 <ul>
-    {% for post in posts %}
-       <li>{{ post.titulo }} - {{ post.fecha_publicacion }}</li>
+    {% for cursos_disponibles in cursos %}
+       <li>{{ cursos_disponibles.nombre }} - {{ cursos_disponibles.comision }}</li>
        {% endfor %}
 </ul>
 
