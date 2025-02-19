@@ -6,7 +6,7 @@ class Profesor(models.Model):
     email = models.EmailField() 
     materia = models.CharField(max_length=100) 
     
-    def __str__(self): return f"{self.nombre} {self.apellido} - {self.profesion}" 
+    def __str__(self): return f"{self.nombre} {self.apellido} - {self.materia}" 
     
 
 class Curso(models.Model): 

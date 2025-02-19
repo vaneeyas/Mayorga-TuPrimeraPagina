@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Curso
 from .models import Profesor
 from .models import Estudiante
-from django.http import HttpResponse
 from .forms import CursoForm
 from .forms import ProfesorForm
 from .forms import EstudianteForm
@@ -46,7 +45,11 @@ def agregar_profesor(request):
 
 
 def estudiantes(request):
-    estudiante = Estudiante.objects.all()
+    busqueda = request.GET.get("busqueda", None)
+    if busqueda:
+        estudiante = Estudiante.objects.filter(carrera__icontains=busqueda)
+    else:
+        estudiante = Estudiante.objects.all()
     return render(request, 'blog/estudiantes.html', context={"estudiantes": estudiante})
 
 def agregar_estudiante(request):
