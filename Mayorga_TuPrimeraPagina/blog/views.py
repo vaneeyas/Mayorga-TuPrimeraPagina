@@ -4,6 +4,7 @@ from .models import Profesor
 from .models import Estudiante
 from django.http import HttpResponse
 from .forms import CursoForm
+from .forms import ProfesorForm
 
 app_name="blog"
 
@@ -26,9 +27,22 @@ def agregar_curso(request):
         cursoForm = CursoForm()
     return render(request, 'blog/agregar_curso.html', context={"cursoForm": cursoForm})    
 
+
 def profesores(request):
     profesor = Profesor.objects.all()
     return render(request, 'blog/profesores.html', context={"profesores": profesor})
+
+def agregar_profesor(request):
+    if request.method=="POST":
+        form = ProfesorForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=True)
+            post.save()
+            return redirect('profesores')
+    else:
+        profesorForm = ProfesorForm()
+    return render(request, 'blog/agregar_profesor.html', context={"profesorForm": profesorForm})   
+
 
 def estudiantes(request):
     estudiante = Estudiante.objects.all()

@@ -9,9 +9,10 @@
 {% endblock content_title%}
 
 {% block content%}
+<a href="{% url 'agregar_profesor' %}" class="btn btn-primary mb-3">Agregar Profesor</a>
 <ul>
     {% for profesor in profesores %}
-       <li>{{ profesor.nombre }} - {{ profesor.apellido }}- {{ profesor.email }}- {{ profesor.materia }}</li>
+       <li>Nombre y Apellido: {{ profesor.nombre }} {{ profesor.apellido }} - Email: {{ profesor.email }} - Materia: {{ profesor.materia }}</li>
        {% endfor %}
 </ul>
 
