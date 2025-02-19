@@ -10,8 +10,9 @@
 
 {% block content%}
 <ul>
+    <a href="{% url 'agregar_estudiante' %}" class="btn btn-primary mb-3">Agregar Estudiante</a>
     {% for estudiante in estudiantes %}
-       <li>{{ estudiante.nombre }} - {{ estudiante.apellido }}- {{ estudiante.email }}- {{ estudiante.carrera }}</li>
+       <li> Nombre y Apellido: {{ estudiante.nombre }} {{ estudiante.apellido }} - Email: {{ estudiante.email }} - Carrera: {{ estudiante.carrera }}</li>
        {% endfor %}
 </ul>
 
